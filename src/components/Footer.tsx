@@ -1,18 +1,37 @@
+import { GitBranch, Terminal, RefreshCw, Check, Bell } from 'lucide-react';
+
 export function Footer() {
   return (
-    <footer className="border-t border-[#27272A] bg-[#0A0A0B] py-10 mt-12">
-      <div className="max-w-7xl mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center justify-between gap-6">
-        
-        <div className="text-slate-400 text-sm text-center md:text-left">
-          <p>© {new Date().getFullYear()} Balaharish Alais Yogesh N.</p>
-          <p className="mt-1">All rights reserved.</p>
+    <footer className="fixed bottom-0 left-0 right-0 h-7 bg-[#0d0f12] border-t border-[#27272A] flex items-center justify-between px-3 z-50 font-mono text-[11px] text-slate-400">
+      <div className="flex items-center h-full gap-4">
+        <a href="https://github.com/Harish-GenZ/Harish_portfolio" target="_blank" rel="noreferrer" className="flex items-center gap-1.5 hover:bg-white/5 px-2 h-full cursor-pointer transition-colors">
+          <GitBranch size={13} className="text-primary" />
+          <span>main*</span>
+        </a>
+        <div className="flex items-center gap-1.5 hover:bg-white/5 px-2 h-full cursor-pointer transition-colors">
+          <RefreshCw size={12} />
+          <span>0</span>
         </div>
-
-        <div className="flex flex-col items-center md:items-end text-sm text-slate-500 font-mono">
-          <p>Built with <span className="text-indigo-400">React</span> & <span className="text-indigo-400">TypeScript</span></p>
-          <p className="mt-1">Designed for performance</p>
+        <div className="hidden sm:flex items-center gap-1.5 hover:bg-white/5 px-2 h-full cursor-pointer transition-colors">
+          <Terminal size={13} />
+          <span>Terminal</span>
         </div>
+      </div>
 
+      <div className="flex items-center h-full gap-4">
+        <div className="hidden md:flex items-center gap-1.5 hover:bg-white/5 px-2 h-full cursor-pointer transition-colors">
+          <span>React {'>'} TypeScript</span>
+        </div>
+        <div className="hidden sm:flex items-center gap-1.5 hover:bg-white/5 px-2 h-full cursor-pointer transition-colors">
+          <span>UTF-8</span>
+        </div>
+        <div className="flex items-center gap-1.5 hover:bg-white/5 px-2 h-full cursor-pointer transition-colors">
+          <Check size={13} />
+          <span>Prettier</span>
+        </div>
+        <div className="flex items-center gap-1.5 hover:bg-white/5 px-2 h-full cursor-pointer transition-colors">
+          <Bell size={13} />
+        </div>
       </div>
     </footer>
   );

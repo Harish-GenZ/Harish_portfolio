@@ -18,9 +18,9 @@ export function Section({ id, title, children, className = '' }: SectionProps) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.5 }}
-            className="text-3xl md:text-4xl font-bold mb-12 text-slate-100"
+            className="text-2xl md:text-3xl font-mono font-bold mb-12 text-slate-300"
           >
-            <span className="text-indigo-500 mr-2">#</span>
+            <span className="text-primary/70 mr-3">//</span>
             {title}
           </motion.h2>
         )}

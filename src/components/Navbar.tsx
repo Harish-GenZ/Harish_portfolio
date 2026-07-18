@@ -30,26 +30,26 @@ export function Navbar() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
-        <a href="#" className="text-xl font-bold font-mono tracking-tighter text-white z-50">
-          Harish<span className="text-indigo-500">.dev</span>
+        <a href="#" className="text-xl font-bold font-mono tracking-tighter text-white z-50 flex items-center">
+          <span className="text-primary mr-2">~/</span>Harish<span className="text-primary">.dev</span>
         </a>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden md:flex items-center gap-8 font-mono">
           {navLinks.map((link) => (
             <a 
               key={link.name} 
               href={link.href}
               className="text-sm font-medium text-slate-400 hover:text-white transition-colors"
             >
-              {link.name}
+              {link.name.toLowerCase()}
             </a>
           ))}
           <a 
             href="#projects" 
-            className="px-5 py-2.5 bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 rounded-md text-sm font-medium hover:bg-indigo-500/20 transition-colors"
+            className="text-primary text-sm font-medium hover:text-white transition-colors"
           >
-            Resume
+            $ resume
           </a>
         </nav>
 
