@@ -1,32 +1,31 @@
-# React + TypeScript + Vite
+# Harish.dev Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A world-class, recruiter-ready personal portfolio website for an AI/ML engineer. Built with React 18, TypeScript, Vite, Tailwind CSS v4, and Framer Motion.
 
-Currently, two official plugins are available:
+## Getting Started
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+To run the development server:
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
-
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+```bash
+npm install
+npm run dev
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+Open [http://localhost:5173](http://localhost:5173) in your browser.
+
+## Adding New Projects
+
+The portfolio is designed to be easily extendable. All data is managed in typed files located in `src/data/`.
+
+To add a new project, edit `src/data/projects.ts`:
+- **Flagship Projects:** Add a new object to the `flagshipProjects` array. Include the `title`, `description`, `techStack`, `highlights`, `status`, `githubUrl`, and `liveUrl`.
+- **Mini Projects:** Add a new object to the `miniProjects` array.
+
+To update your skills, edit `src/data/skills.ts`.
+
+## Tech Stack
+- **React 18 & TypeScript**
+- **Vite** (Build Tool)
+- **Tailwind CSS v4** (Styling)
+- **Framer Motion** (Animations)
+- **Lucide React** (Icons)
