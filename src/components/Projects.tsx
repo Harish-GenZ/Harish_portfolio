@@ -6,7 +6,7 @@ import { FaGithub } from 'react-icons/fa';
 
 export function Projects() {
   return (
-    <Section id="projects" title="projects.ts">
+    <Section id="projects" title="models.py">
       
       {/* Flagship Projects */}
       <div className="space-y-24 mb-32">
@@ -20,15 +20,18 @@ export function Projects() {
             className="grid lg:grid-cols-12 gap-8 items-center group"
           >
             {/* Terminal mock instead of image */}
-            <div className={`lg:col-span-6 aspect-video bg-[var(--color-bg-surface)] border border-[var(--color-border-subtle)] rounded-lg overflow-hidden group-hover:border-primary/30 transition-colors ${index % 2 === 1 ? 'lg:order-2' : ''}`}>
+            <motion.div 
+              whileTap={{ scale: 0.97 }}
+              className={`lg:col-span-6 aspect-video bg-[var(--color-bg-surface)] border border-[var(--color-border-subtle)] rounded-lg overflow-hidden group-hover:border-primary/30 active:border-primary/30 transition-colors ${index % 2 === 1 ? 'lg:order-2' : ''} cursor-default`}
+            >
               <div className="px-4 py-2 border-b border-[var(--color-border-subtle)] bg-[#1e2127] flex items-center gap-2">
-                <div className="w-2.5 h-2.5 rounded-full bg-slate-600 group-hover:bg-red-500 transition-colors" />
-                <div className="w-2.5 h-2.5 rounded-full bg-slate-600 group-hover:bg-amber-500 transition-colors" />
-                <div className="w-2.5 h-2.5 rounded-full bg-slate-600 group-hover:bg-green-500 transition-colors" />
+                <div className="w-2.5 h-2.5 rounded-full bg-slate-600 group-hover:bg-red-500 group-active:bg-red-500 transition-colors" />
+                <div className="w-2.5 h-2.5 rounded-full bg-slate-600 group-hover:bg-amber-500 group-active:bg-amber-500 transition-colors" />
+                <div className="w-2.5 h-2.5 rounded-full bg-slate-600 group-hover:bg-green-500 group-active:bg-green-500 transition-colors" />
                 <div className="ml-2 font-mono text-[10px] text-slate-500">bash — {project.id}</div>
               </div>
-              <div className="p-4 flex flex-col h-[calc(100%-36px)] border-l-2 border-transparent group-hover:border-primary/50 transition-colors">
-                <div className="font-mono text-sm text-slate-400">
+              <div className="p-4 flex flex-col h-[calc(100%-36px)] border-l-2 border-transparent group-hover:border-primary/50 group-active:border-primary/50 transition-colors overflow-x-hidden">
+                <div className="font-mono text-sm text-slate-400 break-words">
                   <TerminalSquare size={32} strokeWidth={1} className="mb-4 opacity-50" />
                   <span className="text-primary">$</span> systemctl start {project.id}_engine<br/>
                   &gt; loading models... OK<br/>
@@ -36,10 +39,10 @@ export function Projects() {
                   <span className="text-[var(--color-syntax-green)]">&gt; ready.</span>
                 </div>
               </div>
-            </div>
+            </motion.div>
 
             {/* Content */}
-            <div className={`lg:col-span-6 border-l-2 border-transparent group-hover:border-primary/50 pl-4 transition-colors ${index % 2 === 1 ? 'lg:order-1 lg:border-l-0 lg:border-r-2 lg:pl-0 lg:pr-4 lg:text-right' : ''}`}>
+            <div className={`lg:col-span-6 border-l-2 border-transparent group-hover:border-primary/50 group-active:border-primary/50 pl-4 transition-colors ${index % 2 === 1 ? 'lg:order-1 lg:border-l-0 lg:border-r-2 lg:pl-0 lg:pr-4 lg:text-right' : ''}`}>
               {project.status && (
                 <div className={`text-xs font-mono text-primary mb-3 flex items-center gap-2 ${index % 2 === 1 ? 'lg:justify-end' : ''}`}>
                   <div className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
@@ -87,7 +90,7 @@ export function Projects() {
 
       {/* Mini Projects */}
       <div>
-        <h3 className="text-xl md:text-2xl font-mono font-bold text-slate-300 mb-8">// other_projects.ts</h3>
+        <h3 className="text-xl md:text-2xl font-mono font-bold text-slate-300 mb-8"># other_models.py</h3>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
           {miniProjects.map((project, index) => (
             <motion.div
@@ -96,13 +99,14 @@ export function Projects() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: index * 0.1 }}
-              className="bg-[var(--color-bg-surface)] border border-[var(--color-border-subtle)] rounded-lg overflow-hidden group hover:border-primary/30 transition-colors flex flex-col h-full"
+              whileTap={{ scale: 0.97 }}
+              className="bg-[var(--color-bg-surface)] border border-[var(--color-border-subtle)] rounded-lg overflow-hidden group hover:border-primary/30 active:border-primary/30 transition-colors flex flex-col h-full cursor-default"
             >
               <div className="px-4 py-2 border-b border-[var(--color-border-subtle)] bg-[#1e2127] flex items-center gap-2">
-                <div className="w-2.5 h-2.5 rounded-full bg-slate-600 group-hover:bg-red-500 transition-colors" />
-                <div className="w-2.5 h-2.5 rounded-full bg-slate-600 group-hover:bg-amber-500 transition-colors" />
-                <div className="w-2.5 h-2.5 rounded-full bg-slate-600 group-hover:bg-green-500 transition-colors" />
-                <div className="ml-2 font-mono text-[10px] text-slate-500">{project.id}.tsx</div>
+                <div className="w-2.5 h-2.5 rounded-full bg-slate-600 group-hover:bg-red-500 group-active:bg-red-500 transition-colors" />
+                <div className="w-2.5 h-2.5 rounded-full bg-slate-600 group-hover:bg-amber-500 group-active:bg-amber-500 transition-colors" />
+                <div className="w-2.5 h-2.5 rounded-full bg-slate-600 group-hover:bg-green-500 group-active:bg-green-500 transition-colors" />
+                <div className="ml-2 font-mono text-[10px] text-slate-500">{project.id}.py</div>
                 
                 {project.githubUrl && project.githubUrl !== '#' && (
                   <a href={project.githubUrl} className="ml-auto text-slate-400 hover:text-white transition-colors">
@@ -111,8 +115,8 @@ export function Projects() {
                 )}
               </div>
               
-              <div className="p-5 flex-grow flex flex-col border-l-2 border-transparent group-hover:border-primary/50 transition-colors">
-                <h4 className="text-md font-mono font-bold text-[var(--color-syntax-purple)] mb-2 group-hover:text-white transition-colors">{project.title}</h4>
+              <div className="p-5 flex-grow flex flex-col border-l-2 border-transparent group-hover:border-primary/50 group-active:border-primary/50 transition-colors">
+                <h4 className="text-md font-mono font-bold text-[var(--color-syntax-purple)] mb-2 group-hover:text-white group-active:text-white transition-colors">{project.title}</h4>
                 <p className="text-sm text-slate-400 mb-6 font-sans flex-grow">{project.description}</p>
                 
                 <div className="flex flex-wrap gap-2 font-mono text-[11px] text-[var(--color-syntax-green)] mt-auto">

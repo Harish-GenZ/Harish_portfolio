@@ -12,11 +12,11 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <h1 className="text-5xl md:text-7xl font-bold font-mono tracking-tight text-white mb-6 flex items-center">
+            <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold font-mono tracking-tight text-white mb-6 flex items-center">
               Harish<span className="inline-block w-[1ch] h-[1em] bg-primary ml-2 animate-blink"></span>
             </h1>
           </motion.div>
-          
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -24,42 +24,42 @@ export function Hero() {
           >
             <h2 className="text-xl md:text-2xl text-primary font-mono mb-6 flex items-center gap-3">
               <Terminal size={24} />
-              AI/ML Engineer
+              AI/ML_Engineer
             </h2>
           </motion.div>
-          
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <p className="text-lg md:text-xl text-slate-400 leading-relaxed mb-10 max-w-2xl font-sans">
-              Passionate about building intelligent systems from first principles. 
-              Currently an AI/ML engineering intern and final-year CS student, 
+            <p className="text-base sm:text-lg md:text-xl text-slate-400 leading-relaxed mb-10 max-w-2xl font-sans">
+              Passionate about building intelligent systems from first principles.
+              Currently an AI/ML engineering intern and final-year CS student,
               focusing on agents, anomaly detection, and LLM-powered products.
             </p>
           </motion.div>
-          
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="flex flex-wrap items-center gap-6 mb-12 font-mono text-sm"
+            className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6 mb-12 font-mono text-sm"
           >
-            <a 
-              href="#projects" 
-              className="text-primary hover:text-white transition-colors"
+            <a
+              href="#projects"
+              className="text-primary hover:text-white transition-colors border border-primary/20 bg-primary/5 px-4 py-3 sm:px-0 sm:py-0 sm:border-none sm:bg-transparent rounded flex items-center justify-center min-h-[44px]"
             >
               $ ./view_projects.sh
             </a>
-            <a 
-              href="#contact" 
-              className="text-slate-400 hover:text-white transition-colors"
+            <a
+              href="#contact"
+              className="text-slate-400 hover:text-white transition-colors border border-[var(--color-border-subtle)] bg-[var(--color-bg-surface)] px-4 py-3 sm:px-0 sm:py-0 sm:border-none sm:bg-transparent rounded flex items-center justify-center min-h-[44px]"
             >
               $ init_contact
             </a>
           </motion.div>
-          
+
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}

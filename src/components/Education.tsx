@@ -18,7 +18,7 @@ const education = [
 
 export function Education() {
   return (
-    <Section id="education" title="education.ts">
+    <Section id="education" title="training.log">
       <div className="max-w-3xl relative">
         {/* Timeline Line */}
         <div className="absolute left-[15px] top-4 bottom-4 w-[2px] bg-[var(--color-border-subtle)]" />

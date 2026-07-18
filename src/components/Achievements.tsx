@@ -32,7 +32,7 @@ const achievements = [
 
 export function Achievements() {
   return (
-    <Section id="achievements" title="achievements.json">
+    <Section id="achievements" title="metrics.csv">
       <div className="space-y-4 max-w-3xl">
         {achievements.map((item, index) => (
           <motion.div
@@ -40,15 +40,15 @@ export function Achievements() {
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-50px" }}
-            transition={{ duration: 0.4, delay: index * 0.1 }}
-            className="flex gap-4 p-4 rounded-lg bg-[var(--color-bg-surface)] border border-[var(--color-border-subtle)] hover:border-primary/30 transition-colors group border-l-2 hover:border-l-primary/50 cursor-default"
+            whileTap={{ scale: 0.98 }}
+            className="flex flex-col sm:flex-row gap-3 sm:gap-4 p-4 rounded-lg bg-[var(--color-bg-surface)] border border-[var(--color-border-subtle)] hover:border-primary/30 active:border-primary/30 transition-colors group border-l-2 hover:border-l-primary/50 active:border-l-primary/50 cursor-default"
           >
-            <div className="flex-shrink-0 mt-1 bg-[#1e2127] p-2.5 rounded-md border border-[var(--color-border-subtle)]">
+            <div className="flex-shrink-0 bg-[#1e2127] p-2.5 rounded-md border border-[var(--color-border-subtle)] w-fit">
               {item.icon}
             </div>
-            <div>
-              <h4 className="text-slate-200 font-mono font-bold text-sm leading-snug mb-1 group-hover:text-white transition-colors">{item.title}</h4>
-              <p className="text-slate-400 text-sm font-sans">{item.context}</p>
+            <div className="mt-1 sm:mt-0">
+              <h4 className="text-slate-200 font-mono font-bold text-[13px] sm:text-sm leading-snug mb-2 group-hover:text-white group-active:text-white transition-colors">{item.title}</h4>
+              <p className="text-slate-400 text-xs sm:text-sm font-sans">{item.context}</p>
             </div>
           </motion.div>
         ))}

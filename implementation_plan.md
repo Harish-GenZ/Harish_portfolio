@@ -1,40 +1,41 @@
-Restyle this existing React/TypeScript portfolio app with a new visual theme.
-Do NOT change component structure, logic, routing, or content — only styling
-(CSS / Tailwind classes / theme tokens).
+Improve the CSS of the top navigation bar in the portfolio (the one with
+the "~/ Harish.dev" logo, file tabs, resume link, and search icon). Do NOT
+change structure, content, or functionality — only spacing, alignment, and
+polish.
 
-THEME: "Live Terminal / IDE" aesthetic — the site should look like a code editor.
+1. Container spacing
+   - Add proper horizontal padding to the entire nav bar container
+     (min 24-32px on desktop, not flush to the viewport edge)
+   - The "~/ Harish.dev" logo should never sit closer than ~24px from
+     the left edge
 
-1. Typography
-   - Primary font: JetBrains Mono (or Fira Code) for headings, nav, labels,
-     project titles, buttons
-   - Body/paragraph text: Inter (readability for longer bio text only)
+2. Logo block
+   - Add a small gap between the "~/" prefix icon and "Harish.dev" text
+     (currently reads too tight)
+   - Give the logo block a bit of right margin before the tabs start,
+     so it doesn't feel like it's colliding with "home.md"
 
-2. Color palette (custom dark editor theme, not default Dracula/One Dark)
-   - Background: near-black, e.g. #0d0f12
-   - One signature accent color for links/CTAs/active states (pick one:
-     electric blue or amber)
-   - Secondary "syntax" palette used decoratively across the site:
-     a muted green for tags/labels, a muted orange for keywords/skills,
-     a muted purple for project titles — consistent, not random
+3. Tab spacing
+   - Increase horizontal gap between tabs (home.md / about.md /
+     skills.json / etc.) — currently too tight, should have consistent
+     comfortable spacing (e.g. 24-28px between tab labels)
+   - Active tab underline should match the tab's text width, not look
+     disconnected
 
-3. Component chrome
-   - Cards (projects, achievements, etc.) styled like code editor panels:
-     thin border, subtle top bar with 3 dot "window controls" (like a
-     mac terminal window), monospace headers
-   - Section headers styled like file paths/comments, e.g. "// about"
-     or "/** projects **/"
-   - Buttons/links styled like editor tabs or terminal prompts (e.g.
-     "$ view project" instead of plain "View Project")
-   - Add a footer status-bar strip styled like VS Code's bottom bar
-     (small text, icons, thin height, accent-colored branch icon)
+4. Right side (resume + search)
+   - Add spacing between "$ resume" and the search icon button
+   - Give the search icon button proper padding so it doesn't look
+     cramped against the edge of the nav bar (same right-edge margin
+     as the left-edge logo margin, for symmetry)
 
-4. Micro-interactions
-   - Hover: subtle left-border highlight (like an active file in a
-     sidebar), not scale/shadow-heavy hover effects
-   - Cursor-blink accent on hero heading if feasible in pure CSS
-   - Keep animations subtle — no glow/particle effects
+5. Vertical rhythm
+   - Ensure logo, tabs, and right-side items are all vertically
+     centered against each other
+   - Add a touch more vertical padding to the whole bar so it doesn't
+     feel squeezed top-to-bottom
 
-5. Constraints
-   - Mobile-first, must remain fully responsive
-   - Keep all existing content, structure, and functionality untouched
-   - Only touch CSS/Tailwind config/theme files and className usage
+6. General
+   - Use consistent spacing scale (e.g. Tailwind's spacing scale —
+     4/6/8px increments) rather than arbitrary one-off values
+   - Left edge margin, right edge margin, and tab-to-tab gaps should
+     all feel like they belong to the same spacing system

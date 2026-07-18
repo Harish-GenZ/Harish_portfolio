@@ -5,7 +5,7 @@ import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
 export function Contact() {
   return (
-    <Section id="contact" title="contact.sh">
+    <Section id="contact" title="inference.py">
       <div className="grid md:grid-cols-2 gap-12">
         <motion.div
           initial={{ opacity: 0, x: -20 }}
@@ -60,17 +60,18 @@ export function Contact() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.2 }}
+          whileTap={{ scale: 0.98 }}
         >
-          <div className="bg-[var(--color-bg-surface)] border border-[var(--color-border-subtle)] rounded-lg overflow-hidden group hover:border-primary/30 transition-colors">
+          <div className="bg-[var(--color-bg-surface)] border border-[var(--color-border-subtle)] rounded-lg overflow-hidden group hover:border-primary/30 active:border-primary/30 transition-colors cursor-default">
             {/* Window Controls */}
             <div className="px-4 py-2 border-b border-[var(--color-border-subtle)] bg-[#1e2127] flex items-center gap-2">
-              <div className="w-2.5 h-2.5 rounded-full bg-slate-600 group-hover:bg-red-500 transition-colors" />
-              <div className="w-2.5 h-2.5 rounded-full bg-slate-600 group-hover:bg-amber-500 transition-colors" />
-              <div className="w-2.5 h-2.5 rounded-full bg-slate-600 group-hover:bg-green-500 transition-colors" />
-              <div className="ml-2 font-mono text-[10px] text-slate-500">bash — sendMessage</div>
+              <div className="w-2.5 h-2.5 rounded-full bg-slate-600 group-hover:bg-red-500 group-active:bg-red-500 transition-colors" />
+              <div className="w-2.5 h-2.5 rounded-full bg-slate-600 group-hover:bg-amber-500 group-active:bg-amber-500 transition-colors" />
+              <div className="w-2.5 h-2.5 rounded-full bg-slate-600 group-hover:bg-green-500 group-active:bg-green-500 transition-colors" />
+              <div className="ml-2 font-mono text-[10px] text-slate-500">python inference.py --contact</div>
             </div>
 
-            <form className="p-6 space-y-4 font-mono text-sm border-l-2 border-transparent group-hover:border-primary/50 transition-colors">
+            <form className="p-6 space-y-4 font-mono text-sm border-l-2 border-transparent group-hover:border-primary/50 group-active:border-primary/50 transition-colors">
               <div>
                 <label htmlFor="name" className="block text-slate-500 text-xs mb-2">Name</label>
                 <div className="relative">
@@ -115,7 +116,7 @@ export function Contact() {
                 className="w-full mt-4 bg-transparent border border-primary/50 text-primary hover:bg-primary/10 py-3 rounded font-bold transition-colors flex items-center justify-center gap-2"
                 onClick={(e) => e.preventDefault()}
               >
-                $ send_message
+                $ invoke model
               </button>
             </form>
           </div>
