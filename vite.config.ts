@@ -8,4 +8,12 @@ export default defineConfig({
     tailwindcss(),
     react()
   ],
+  server: {
+    allowedHosts: ['matted-arming-exile.ngrok-free.dev'],
+    hmr: {
+      protocol: 'wss',
+      host: 'matted-arming-exile.ngrok-free.dev',
+      clientPort: 443,
+    },
+  },
 })

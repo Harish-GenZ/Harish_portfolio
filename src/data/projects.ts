@@ -7,6 +7,8 @@ export interface Project {
   status?: string;
   githubUrl?: string;
   liveUrl?: string;
+  playUrl?: string;
+  titleUrl?: string;
 }
 
 export interface MiniProject {
@@ -16,6 +18,7 @@ export interface MiniProject {
   techStack: string[];
   githubUrl?: string;
   liveUrl?: string;
+  titleUrl?: string;
 }
 
 // INSTRUCTIONS FOR ADDING NEW PROJECTS:
@@ -37,7 +40,8 @@ export const flagshipProjects: Project[] = [
     ],
     status: "Published; presented at IMSTEM 2026",
     githubUrl: "#",
-    liveUrl: "#"
+    liveUrl: "#",
+    titleUrl: "https://www.linkedin.com/posts/balaharish-alais-yogesh-n-95a277305_finalyearproject-technovision2026-firstprize-ugcPost-7455912793913851904-Q60w/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE3Q05YBRtSuXHY00-hwvJ75_editkvPsus"
   },
   {
     id: "attendifyx",
@@ -51,7 +55,8 @@ export const flagshipProjects: Project[] = [
     ],
     status: "Published in IRJASH",
     githubUrl: "#",
-    liveUrl: "#"
+    liveUrl: "#",
+    titleUrl: "https://www.linkedin.com/posts/balaharish-alais-yogesh-n-95a277305_built-attendifyx-to-rethink-how-attendance-ugcPost-7442393243427782656-rDuk/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE3Q05YBRtSuXHY00-hwvJ75_editkvPsus"
   },
   {
     id: "friday",
@@ -64,7 +69,8 @@ export const flagshipProjects: Project[] = [
       "Demonstrates advanced AI agent design and cross-platform automation capabilities."
     ],
     githubUrl: "#",
-    liveUrl: "#"
+    liveUrl: "#",
+    titleUrl: "https://www.linkedin.com/posts/balaharish-alais-yogesh-n-95a277305_ai-personalassistant-livekit-ugcPost-7360225583915556864-HzN3/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE3Q05YBRtSuXHY00-hwvJ75_editkvPsus"
   },
   {
     id: "ipl-simulator",
@@ -76,6 +82,21 @@ export const flagshipProjects: Project[] = [
       "Incorporates a mathematical AI franchise engine for realistic auction strategy simulation.",
       "Evaluates player roles, squad balance, budget constraints, capped players, and overseas limits dynamically."
     ],
+    githubUrl: "#",
+    playUrl: "https://auction-app-delta.vercel.app/",
+    titleUrl: "https://auction-app-delta.vercel.app/"
+  },
+  {
+    id: "soora-llm",
+    title: "Soora — A Horizontal Large Language Model",
+    description: "Building a foundational LLM focused on strong reasoning, coding capabilities, and chain-of-thought processing with an extended context window.",
+    techStack: ["Python", "PyTorch", "Transformers", "Machine Learning"],
+    highlights: [
+      "Currently in local development phase as a custom horizontal LLM.",
+      "Optimized for advanced reasoning, complex coding tasks, and robust chain-of-thought generation.",
+      "Engineered to handle large context windows for comprehensive understanding and generation."
+    ],
+    status: "In Development (Local)",
     githubUrl: "#",
     liveUrl: "#"
   }
@@ -116,5 +137,36 @@ export const miniProjects: MiniProject[] = [
     description: "Full-featured e-commerce website with modern user interface.",
     techStack: ["React", "TypeScript", "Tailwind CSS"],
     githubUrl: "#"
+  }
+];
+
+export const hackathonProjects: Project[] = [
+  {
+    id: "technovision-2026",
+    title: "Technovision 2026 — 1st Prize for InsiderWatch",
+    description: "Secured first prize out of 10+ competing teams at the Technovision 2026 Hackathon for developing InsiderWatch, an AI-powered insider threat detection system.",
+    techStack: ["Python", "FastAPI", "React", "Machine Learning"],
+    highlights: [
+      "Awarded 1st Prize out of 10+ competing teams.",
+      "Developed a complete working prototype over a period of 2 months.",
+      "Integrated advanced anomaly detection using AI."
+    ],
+    status: "1st Prize Winner",
+    githubUrl: "#"
+  },
+  {
+    id: "halleyx-challenge",
+    title: "HalleyX Challenge — Custom Dashboard Builder",
+    description: "A seamless custom dashboard builder for business users to visually create dashboards, graphs, tables, and charts directly from their data sources. 🖥️ Note: For the best experience, please view the live application on a desktop device.",
+    techStack: ["React", "TypeScript", "Data Visualization", "Drag & Drop"],
+    highlights: [
+      "Empowers non-technical business users to build custom dashboards seamlessly.",
+      "Supports various interactive visualization widgets including graphs, tables, and charts.",
+      "Engineered with a highly interactive and intuitive drag-and-drop interface."
+    ],
+    status: "Event Challenge",
+    githubUrl: "#",
+    liveUrl: "https://halleyx-challenge-ii-revised.vercel.app/",
+    titleUrl: "https://halleyx-challenge-ii-revised.vercel.app/"
   }
 ];

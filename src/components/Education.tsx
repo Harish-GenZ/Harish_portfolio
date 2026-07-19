@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 const education = [
   {
     institution: 'Kamaraj College of Engineering and Technology',
-    degree: 'B.Tech Computer Science',
+    degree: 'B.Tech Information Technology',
     duration: '2022 — 2026',
     details: 'CGPA 8.0, Honors in Product Development'
   },

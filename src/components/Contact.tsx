@@ -1,9 +1,19 @@
+import { useState } from 'react';
 import { Section } from './Section';
 import { motion } from 'framer-motion';
 import { Mail, Phone } from 'lucide-react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
 export function Contact() {
+  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const subject = encodeURIComponent(`Portfolio Contact from ${formData.name}`);
+    const body = encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`);
+    window.location.href = `mailto:balah8986@gmail.com?subject=${subject}&body=${body}`;
+  };
+
   return (
     <Section id="contact" title="inference.py">
       <div className="grid md:grid-cols-2 gap-12">
@@ -19,6 +29,10 @@ export function Contact() {
           <p className="text-slate-400 mb-8 font-sans leading-relaxed">
             I'm always interested in hearing about new opportunities, exciting projects, 
             or discussing the latest in AI/ML. Let's build something intelligent together.
+            <br/><br/>
+            <span className="text-[var(--color-syntax-green)] font-mono text-xs border-l-2 border-[var(--color-syntax-green)] pl-3 py-1.5 block bg-[var(--color-syntax-green)]/10 rounded-r-sm">
+              # System Status: Active. The form on the right is fully functional and routes directly to Harish's inbox. Reach out confidently!
+            </span>
           </p>
 
           <div className="space-y-6 font-mono text-sm">
@@ -71,7 +85,7 @@ export function Contact() {
               <div className="ml-2 font-mono text-[10px] text-slate-500">python inference.py --contact</div>
             </div>
 
-            <form className="p-6 space-y-4 font-mono text-sm border-l-2 border-transparent group-hover:border-primary/50 group-active:border-primary/50 transition-colors">
+            <form onSubmit={handleSubmit} className="p-6 space-y-4 font-mono text-sm border-l-2 border-transparent group-hover:border-primary/50 group-active:border-primary/50 transition-colors">
               <div>
                 <label htmlFor="name" className="block text-slate-500 text-xs mb-2">Name</label>
                 <div className="relative">
@@ -79,6 +93,9 @@ export function Contact() {
                   <input
                     type="text"
                     id="name"
+                    value={formData.name}
+                    onChange={(e) => setFormData({...formData, name: e.target.value})}
+                    required
                     className="w-full bg-[#0d0f12] border border-[var(--color-border-subtle)] rounded px-8 py-3 text-slate-300 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors"
                     placeholder="guest_user"
                   />
@@ -92,6 +109,9 @@ export function Contact() {
                   <input
                     type="email"
                     id="email"
+                    value={formData.email}
+                    onChange={(e) => setFormData({...formData, email: e.target.value})}
+                    required
                     className="w-full bg-[#0d0f12] border border-[var(--color-border-subtle)] rounded px-8 py-3 text-slate-300 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors"
                     placeholder="user@domain.com"
                   />
@@ -105,6 +125,9 @@ export function Contact() {
                   <textarea
                     id="message"
                     rows={4}
+                    value={formData.message}
+                    onChange={(e) => setFormData({...formData, message: e.target.value})}
+                    required
                     className="w-full bg-[#0d0f12] border border-[var(--color-border-subtle)] rounded px-8 py-3 text-slate-300 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors resize-none"
                     placeholder="Enter message..."
                   ></textarea>
@@ -114,7 +137,6 @@ export function Contact() {
               <button
                 type="submit"
                 className="w-full mt-4 bg-transparent border border-primary/50 text-primary hover:bg-primary/10 py-3 rounded font-bold transition-colors flex items-center justify-center gap-2"
-                onClick={(e) => e.preventDefault()}
               >
                 $ invoke model
               </button>

@@ -6,15 +6,15 @@ export function About() {
   return (
     <Section id="about" title="about.md">
       <div className="grid md:grid-cols-12 gap-12 items-start">
-        <motion.div 
+        <motion.div
           whileTap={{ scale: 0.99 }}
           className="md:col-span-8 text-slate-400 text-lg leading-relaxed space-y-6 font-sans group border-l-2 border-transparent hover:border-primary/50 active:border-primary/50 pl-4 transition-colors cursor-default"
         >
           <p>
-            Hi, I'm <strong className="text-slate-200">Balaharish Alais Yogesh N</strong>. I build end-to-end ML systems—from anomaly detection engines and real-time computer vision applications to LLM-powered autonomous agents.
+            Hi, I'm <strong className="text-slate-200">Balaharish alais Yogesh N</strong>. I build end-to-end ML systems—from anomaly detection engines and real-time computer vision applications to LLM-powered autonomous agents.
           </p>
           <p>
-            Currently, I'm a final-year B.Tech Computer Science student at Kamaraj College of Engineering and Technology (Honors in Product Development), and working as an AI/ML Engineering Intern at a fast-paced startup.
+            I am a recent B.Tech Information Technology graduate (Class of 2026) from Kamaraj College of Engineering and Technology, where I earned Honors in Product Development. I am currently working as an AI/ML Engineering Intern at a fast-paced startup.
           </p>
           <p>
             My long-term goal is to contribute to frontier AI research and engineering, pushing the boundaries of what intelligent systems can achieve. I thrive in environments that require rapid prototyping, critical thinking, and a deep understanding of core ML principles.
@@ -48,10 +48,10 @@ export function About() {
             </div>
 
             <div className="relative aspect-square flex items-center justify-center bg-[#0d0f12] overflow-hidden">
-              <img 
-                src={headshot} 
-                alt="Harish" 
-                className="w-full h-full object-cover object-center grayscale hover:grayscale-0 active:grayscale-0 transition-all duration-500" 
+              <img
+                src={headshot}
+                alt="Harish"
+                className="w-full h-full object-cover object-center grayscale hover:grayscale-0 active:grayscale-0 transition-all duration-500"
               />
             </div>
           </div>

@@ -35,7 +35,7 @@ export function Hero() {
           >
             <p className="text-base sm:text-lg md:text-xl text-slate-400 leading-relaxed mb-10 max-w-2xl font-sans">
               Passionate about building intelligent systems from first principles.
-              Currently an AI/ML engineering intern and final-year CS student,
+              Currently an AI/ML engineering intern and an IT Graduate,
               focusing on agents, anomaly detection, and LLM-powered products.
             </p>
           </motion.div>
@@ -78,7 +78,7 @@ export function Hero() {
               <Mail size={22} />
               <span className="sr-only">Email</span>
             </a>
-            <a href="https://leetcode.com/u/BALAHARISHALAISYOGESH" target="_blank" rel="noreferrer" className="font-mono text-xs font-medium hover:text-primary transition-colors flex items-center h-5">
+            <a href="https://leetcode.com/u/BALAHARISHalaisYOGESH" target="_blank" rel="noreferrer" className="font-mono text-xs font-medium hover:text-primary transition-colors flex items-center h-5">
               LC
             </a>
           </motion.div>
